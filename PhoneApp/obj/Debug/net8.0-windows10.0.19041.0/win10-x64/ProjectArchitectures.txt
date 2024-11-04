@@ -1,0 +1,1 @@
+C:\Users\sandu\Desktop\PhoneApp\PhoneApp\PhoneApp.csproj;x64

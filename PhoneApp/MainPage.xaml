@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PhoneApp.MainPage">
+
+    <StackLayout Padding="10">
+        <Entry x:Name="NumeEntry" Placeholder="Nume" />
+        <Entry x:Name="NumarEntry" Placeholder="Numar de telefon" />
+        <Button Text="Adauga Contact" Clicked="saveButton_clicked" x:Name="saveButton" />
+
+        <ListView x:Name="ContactsListView" ItemTapped="listView_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10">
+                            <Label Text="{Binding Name}" VerticalOptions="Center" />
+                            <Label Text="{Binding PhoneNumber}" VerticalOptions="Center" Margin="10,0" />
+                            <!-- <Button Text="Editeaza" Clicked="OnEditContactClicked" CommandParameter="{Binding .}" /> -->
+                            <!-- <Button Text="Sterge" Clicked="OnDeleteContactClicked" CommandParameter="{Binding .}" /> -->
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
